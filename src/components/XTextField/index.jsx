@@ -31,7 +31,7 @@ export default function XTextField({ placeholder }) {
         spellCheck={false}
         value={inputValue}
         onChange={(e)=>setInputValue(e.target.value)}
-        className={classNames(" focus:outline-none ", {
+        className={classNames(" focus:outline-none bg-inherit", {
           "w-0": focused  === false,
           "w-full": focused === true || inputValue!=="",
         })}

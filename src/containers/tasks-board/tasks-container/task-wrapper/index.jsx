@@ -3,7 +3,7 @@ import { BsList } from 'react-icons/bs'
 
 export default function TaskWrapper() {
   return (
-    <div className="my-2 border rounded-xl p-3 text-zinc-700">
+    <div className=" border-b-2 border-dashed border-zinc-200 bg-white  p-3 text-zinc-700">
         <div className="flex justify-between items-center  border-b pb-2">
           <div className="font-medium text-sm">Complete Fox UI </div>
           <div className="bg-accent/70 text-white font-medium flex justify-center items-center text-xs rounded-lg w-8 h-8">P1</div>

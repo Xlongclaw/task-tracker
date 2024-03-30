@@ -15,7 +15,7 @@ export default function TasksContainer({ status }) {
       })}>
         {status}
       </p>
-      <div className="h-[30rem] overflow-y-scroll hidescroll">
+      <div className="h-[30rem] overflow-y-scroll hidescroll border shadow-lg my-2 rounded-2xl">
       <TaskWrapper/>
       <TaskWrapper/>
       <TaskWrapper/>
