@@ -16,3 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: rgb(39 39 42);
 }
+
+.hidescroll::-webkit-scrollbar{
+display: none;
+}

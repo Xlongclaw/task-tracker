@@ -1,6 +1,7 @@
 import React from 'react'
 import XTextField from '../../../components/XTextField'
 import { BsCaretDownFill } from 'react-icons/bs'
+import XDatePicker from '../../../components/XDatePicker'
 
 export default function FilterSection() {
   return (
@@ -10,15 +11,9 @@ export default function FilterSection() {
         {/* <div className='text-sm font-medium border border-black rounded-full p-4 flex gap-4 items-center'>
           <h4>Priority</h4>
           <BsCaretDownFill className='text-accent'/>
-        </div>
-        <div className='text-sm font-medium border border-black rounded-full p-4 flex gap-4 items-center'>
-          <h4>From Date</h4>
-          <BsCaretDownFill className='text-accent'/>
-        </div>
-        <div className='text-sm font-medium border border-black rounded-full p-4 flex gap-4 items-center'>
-          <h4>To Date</h4>
-          <BsCaretDownFill className='text-accent'/>
         </div> */}
+        <XDatePicker title={'From date'}/>
+        <XDatePicker title={'To date'}/>
       </div>
   )
 }
