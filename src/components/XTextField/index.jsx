@@ -1,10 +1,15 @@
 import classNames from "classnames";
 import React from "react";
 
-export default function XTextField({ placeholder }) {
+export default function XTextField({ placeholder,onChange }) {
   const [focused, setFocused] = React.useState(false);
   const [inputValue,setInputValue] = React.useState("")
   const inputRef = React.useRef(null);
+
+
+  React.useEffect(()=>{
+    onChange(inputValue)
+  },[inputValue])
 
   return (
     <div

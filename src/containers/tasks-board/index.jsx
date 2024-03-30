@@ -2,8 +2,6 @@ import React from "react";
 import FilterSection from "./filter-section";
 import XButton from "../../components/XButton";
 import TasksContainer from "./tasks-container";
-import XTextField from "../../components/XTextField";
-import { BsX } from "react-icons/bs";
 import Mask from "../../components/Mask";
 import CreateTaskPanel from "../../components/create-task-panel";
 
