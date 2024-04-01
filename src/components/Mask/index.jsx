@@ -2,6 +2,7 @@ import classNames from "classnames";
 import React from "react";
 
 export default function Mask({children,show}) {
+  if(show)
   return (
     <div
       style={{ height: window.outerHeight }}

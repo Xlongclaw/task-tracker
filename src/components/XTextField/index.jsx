@@ -1,14 +1,15 @@
 import classNames from "classnames";
 import React from "react";
 
-export default function XTextField({ placeholder,onChange }) {
+export default function XTextField({ placeholder,onChange,disabled = false,defaultValue = "" }) {
   const [focused, setFocused] = React.useState(false);
-  const [inputValue,setInputValue] = React.useState("")
+  const [inputValue,setInputValue] = React.useState(defaultValue)
   const inputRef = React.useRef(null);
 
 
   React.useEffect(()=>{
     onChange(inputValue)
+    console.log(inputValue);
   },[inputValue])
 
   return (
@@ -18,7 +19,7 @@ export default function XTextField({ placeholder,onChange }) {
         inputRef.current.focus();
       }}
       onBlur={() => setFocused(false)}
-      className={classNames("text-sm font-medium border w-48 cursor-text relative rounded-full px-6 py-3 flex gap-4 items-center transition-all hover:border-black hover:text-black",{
+      className={classNames(" text-xs lg:text-sm font-medium border lg:w-48 cursor-text relative rounded-full px-6 py-3 flex gap-4 items-center transition-all hover:border-black hover:text-black",{
         "border-accent":focused,
         "border-zinc-600 text-zinc-600":!focused
       })}
@@ -33,6 +34,7 @@ export default function XTextField({ placeholder,onChange }) {
       </h4>
       <input
         ref={inputRef}
+        disabled={disabled}
         spellCheck={false}
         value={inputValue}
         onChange={(e)=>setInputValue(e.target.value)}

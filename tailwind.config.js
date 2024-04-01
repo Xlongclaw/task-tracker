@@ -5,6 +5,9 @@ export default {
     extend: {
       colors:{
         accent:"rgb(5 150 105)"
+      },
+      screens:{
+        "xs":"525px"
       }
     },
   },
